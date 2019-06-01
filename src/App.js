@@ -1,24 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Header from "./shared/components/Header/Header";
+import Footer from "./shared/components/Footer/Footer";
+import CardContainer from "./CardContainer";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+      <Header title="App">
+        <nav
+          className="navbar is-link"
+          role="navigation"
+          aria-label="main navigation"
         >
-          Learn React
-        </a>
-      </header>
+          <div className="navbar-brand">
+            <a className="navbar-item" href="/">
+              <h1>Simple Card Flip</h1>
+            </a>
+          </div>
+        </nav>
+      </Header>
+      <CardContainer />
+      <Footer isAppFooter={true}>
+        <div className="content has-text-centered">
+          <p>Footer</p>
+        </div>
+      </Footer>
     </div>
   );
 }
